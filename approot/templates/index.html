@@ -1,0 +1,14 @@
+<html>
+    <body>
+        {% if result %}
+          <IMG SRC="{{filepath}} " BORDER="1"> 認識結果は {{result}} です<BR>
+          <HR>
+        {% endif %}
+        ファイルを選択して送信してください<BR>
+        <form action = "./" method = "POST" 
+           enctype = "multipart/form-data">
+           <input type = "file" name = "file" />
+           <input type = "submit"/>
+        </form>
+     </body>
+</html>

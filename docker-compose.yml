@@ -1,0 +1,17 @@
+version: "3"
+services:
+  webmnist:
+    build: ./
+    volumes:
+      - ./:/app
+    tty: true
+    ports:
+      - "5001:5000"
+    container_name: webmnistcont
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

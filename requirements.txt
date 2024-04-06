@@ -1,0 +1,6 @@
+# requirements.txt
+flake8
+black
+hydra-core
+Flask
+Gunicorn
