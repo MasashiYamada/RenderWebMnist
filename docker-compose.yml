@@ -3,7 +3,7 @@ services:
   webmnist:
     build: ./
     volumes:
-      - ./:/app
+      - ./approot:/app
     tty: true
     ports:
       - "5001:5000"

@@ -10,3 +10,5 @@ COPY ./requirements.txt /app
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt 
 
+# ホスト側のディレクトリをマウントする代わりに、approotの中身を /app/にコピー
+COPY ./approot/. /app/.
